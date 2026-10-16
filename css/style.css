@@ -1,0 +1,320 @@
+/* =========================================================
+style.css — Genie-Gym Mobile-Responsive & Dark Theme
+========================================================= */
+:root {
+  --brand: #6366f1; /* Electric Indigo */
+  --brand-dark: #4f46e5; 
+  --brand-accent: #818cf8;
+  --bg-body: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --input-bg: #ffffff;
+  --modal-bg: #ffffff;
+  --card-hover-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Global Dark Mode Palette ---------- */
+body.dark-mode {
+  --bg-body: #0b0f19;
+  --card-bg: #151c2c;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --input-bg: #0f172a;
+  --modal-bg: #151c2c;
+  --card-hover-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden; /* Prevent horizontal page spill on small phones */
+}
+
+/* ---------- App Header ---------- */
+.app-navbar {
+  background: linear-gradient(90deg, #0b0f19, #1e1b4b 50%, var(--brand-dark)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-accent));
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+}
+
+/* ---------- Cards & Containers ---------- */
+.card {
+  border-radius: 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Stat Icon Rectangular Box Styling */
+.stat-icon {
+  width: auto;
+  height: auto;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .stat-icon {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Overrides for Bootstrap Utilities in Dark Mode */
+body.dark-mode .bg-white,
+body.dark-mode .bg-light,
+body.dark-mode .bg-body-tertiary {
+  background-color: #1a2336 !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .text-dark {
+  color: #f1f5f9 !important;
+}
+
+body.dark-mode .text-secondary {
+  color: #cbd5e1 !important;
+}
+
+body.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .border,
+body.dark-mode .border-top,
+body.dark-mode .border-bottom,
+body.dark-mode .border-start,
+body.dark-mode .border-end,
+body.dark-mode .border-light {
+  border-color: var(--border-color) !important;
+}
+
+/* ---------- Modals & Form Controls ---------- */
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .modal-header.bg-info-subtle {
+  background-color: rgba(14, 165, 233, 0.15) !important;
+}
+
+.form-control, .form-select {
+  background-color: var(--input-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .form-select option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.25);
+}
+
+/* ---------- List Groups & Badges ---------- */
+body.dark-mode .list-group-item {
+  background-color: #1a2336 !important;
+  border-color: var(--border-color) !important;
+  color: #f8fafc !important;
+}
+
+body.dark-mode .bg-primary-subtle {
+  background-color: rgba(99, 102, 241, 0.25) !important;
+  color: #a5b4fc !important;
+}
+
+body.dark-mode .bg-success-subtle {
+  background-color: rgba(34, 197, 94, 0.2) !important;
+  color: #86efac !important;
+}
+
+body.dark-mode .bg-info-subtle {
+  background-color: rgba(14, 165, 233, 0.2) !important;
+  color: #7dd3fc !important;
+}
+
+body.dark-mode .text-primary {
+  color: #a5b4fc !important;
+}
+
+body.dark-mode .text-success {
+  color: #4ade80 !important;
+}
+
+body.dark-mode .text-info-emphasis,
+body.dark-mode .text-info {
+  color: #38bdf8 !important;
+}
+
+/* ---------- Drag & Drop Zones & Bank ---------- */
+.draggable-item {
+  cursor: grab;
+  touch-action: manipulation;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.draggable-item:active {
+  cursor: grabbing;
+  transform: scale(0.97);
+}
+
+body.dark-mode .draggable-item {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+body.dark-mode .assigned-exercises-list {
+  background-color: #0f172a !important;
+  border: 2px dashed #334155 !important;
+}
+
+/* ---------- Auth Page ---------- */
+.auth-page {
+  background: linear-gradient(135deg, #0b0f19, var(--brand-dark) 65%, var(--brand));
+  min-height: 100vh;
+}
+
+/* ---------- Custom Scrollbars ---------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE MEDIA QUERIES (Small Screens & Phones)
+   ========================================================= */
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Header adjustments */
+  h1.h3 {
+    font-size: 1.35rem;
+  }
+
+  .stat-card .card-body {
+    padding: 1rem !important;
+  }
+
+  .stat-card h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Modals on mobile */
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+    max-height: 75vh;
+  }
+
+  /* Split Modal Drag & Drop column stacking */
+  #exerciseBank {
+    max-height: 200px !important;
+  }
+
+  #dropZonesContainer {
+    max-height: 280px !important;
+  }
+
+  /* Drop zone focus inputs on mobile */
+  .drop-zone .day-focus-input {
+    width: 60% !important;
+  }
+
+  /* Weekly Graph items spacing on small screens */
+  .weekly-graph-item {
+    font-size: 0.85rem;
+    padding: 0.6rem !important;
+  }
+
+  .weekly-graph-item .day-badge {
+    width: 75px !important;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0.5rem;
+  }
+
+  .assigned-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem !important;
+  }
+}
