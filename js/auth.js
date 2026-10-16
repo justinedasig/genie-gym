@@ -12,8 +12,8 @@ NOTE: This is "client-side" authentication, good for learning
 and for a static free host (GitHub Pages / Netlify / Vercel).
 A real production app would check passwords on a server.
 ========================================================= */
-const USERS_KEY = "mt_users"; // CHANGE "mt_" to your app's prefix
-const SESSION_KEY = "mt_session";
+const USERS_KEY = "gg_users"; // CHANGE "mt_" to your app's prefix
+const SESSION_KEY = "gg_session";
 /** Turn a password into a SHA-256 hex string. */
 async function hashPassword(password) {
     if (!window.crypto || !window.crypto.subtle) {
