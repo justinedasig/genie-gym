@@ -15,7 +15,7 @@
 
 You can test the application using the following test account or create a new one via the signup interface:
 
-* **Email:** `demo@mytracker.com`
+* **Email:** `demo@geniegym.com`
 * **Password:** `demo1234`
 
 ---

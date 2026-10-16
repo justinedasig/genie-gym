@@ -44,10 +44,10 @@ function saveUsers(users) {
 instructor can log in right away. */
 async function seedDemoUser() {
     const users = getUsers();
-    if (!users.some((u) => u.email === "demo@mytracker.com")) {
+    if (!users.some((u) => u.email === "demo@geniegym.com")) {
         users.push({
             name: "Demo Student",
-            email: "demo@mytracker.com",
+            email: "demo@geniegym.com",
             passwordHash: await hashPassword("demo1234"),
             createdAt: new Date().toISOString(),
         });

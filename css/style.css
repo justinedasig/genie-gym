@@ -69,6 +69,20 @@ body {
   box-shadow: var(--card-hover-shadow);
 }
 
+/* =========================================================
+   Small Text (.small) Optimization for Dark Mode
+   ========================================================= */
+body.dark-mode .small,
+body.dark-mode small {
+  color: #272829 !important; /* Soft slate gray with high legibility on dark surfaces */
+}
+
+/* Maintain crispness when paired with muted classes in dark mode */
+body.dark-mode .small.text-muted,
+body.dark-mode .text-muted.small {
+  color: #94a3b8 !important;
+}
+
 /* Stat Icon Rectangular Box Styling */
 .stat-icon {
   width: auto;
